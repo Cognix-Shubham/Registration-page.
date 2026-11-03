@@ -64,7 +64,9 @@ This is a frontend-only project.
 
 ## 👨‍💻 Developer
 
-**Developed by:** Shubham Mishra
+Shubham Mishra
+
+Github: Cognix-Shubham
 
 **Project:** ZENITH SCHOOL OF AI – Student Registration System
 
