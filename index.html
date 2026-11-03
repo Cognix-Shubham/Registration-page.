@@ -1,0 +1,535 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZENITH SCHOOL OF AI | Student Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+    </div>
+
+    <div class="main-container">
+
+        <header class="header">
+
+            <span class="logo">✦ ZENITH SCHOOL OF AI</span>
+
+            <h1>Student Registration</h1>
+
+            <p>Start your journey. Build your future.</p>
+
+            <div class="line"></div>
+
+        </header>
+
+        <form id="registrationForm">
+
+            <!-- PERSONAL INFORMATION -->
+
+            <section>
+
+                <h2>01. Personal Information</h2>
+
+                <div class="photo-upload">
+
+                    <label>Upload Student Photo</label>
+
+                    <input type="file"
+                           id="photo"
+                           accept="image/*">
+
+                    <img id="preview" alt="Student photo preview"
+                         hidden>
+
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label>First Name *</label>
+                        <input type="text"
+                               id="firstName"
+                               placeholder="Enter first name"
+                               required>
+                    </div>
+
+                    <div class="field">
+                        <label>Last Name *</label>
+                        <input type="text"
+                               id="lastName"
+                               placeholder="Enter last name"
+                               required>
+                    </div>
+
+                    <div class="field">
+                        <label>Email Address *</label>
+                        <input type="email"
+                               id="email"
+                               placeholder="example@gmail.com"
+                               required>
+                    </div>
+
+                    <div class="field">
+                        <label>Phone Number *</label>
+                        <input type="tel"
+                               id="phone"
+                               placeholder="Enter phone number"
+                               required>
+                    </div>
+
+                    <div class="field">
+                        <label>Date of Birth *</label>
+                        <input type="date"
+                               id="dob"
+                               required>
+                    </div>
+
+                    <div class="field">
+                        <label>Blood Group</label>
+                        <select id="bloodGroup">
+                            <option value="">Select blood group</option>
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Gender *</label>
+                        <select id="gender" required>
+                            <option value="">Select gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                            <option>Prefer not to say</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Nationality</label>
+                        <input type="text"
+                               id="nationality"
+                               placeholder="Indian">
+                    </div>
+
+                    <div class="field">
+                        <label>Password *</label>
+                        <input type="password"
+                               id="password"
+                               placeholder="Minimum 8 characters"
+                               minlength="8"
+                               required>
+                    </div>
+
+                    <div class="field">
+                        <label>Confirm Password *</label>
+                        <input type="password"
+                               id="confirmPassword"
+                               placeholder="Confirm password"
+                               required>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ADDRESS INFORMATION -->
+
+            <section>
+
+                <h2>02. Address Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="field full">
+                        <label>Full Address *</label>
+                        <textarea id="address"
+                                  rows="3"
+                                  placeholder="Enter complete address"
+                                  required></textarea>
+                    </div>
+
+                    <div class="field">
+                        <label>Country</label>
+                        <select id="country">
+                            <option>India</option>
+                            <option>USA</option>
+                            <option>UK</option>
+                            <option>Canada</option>
+                            <option>Australia</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>State</label>
+                        <input type="text"
+                               id="state"
+                               placeholder="Enter state">
+                    </div>
+
+                    <div class="field">
+                        <label>City</label>
+                        <input type="text"
+                               id="city"
+                               placeholder="Enter city">
+                    </div>
+
+                    <div class="field">
+                        <label>PIN Code</label>
+                        <input type="text"
+                               id="pin"
+                               maxlength="6"
+                               pattern="[0-9]{6}"
+                               placeholder="6 digit PIN">
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ACADEMIC INFORMATION -->
+
+            <section>
+
+                <h2>03. Academic Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label>Registration Number</label>
+                        <input type="text"
+                               id="registrationNumber"
+                               placeholder="Enter registration number">
+                    </div>
+
+                    <div class="field">
+                        <label>Course *</label>
+                        <select id="course" required>
+                            <option value="">Choose course</option>
+                            <option>B.Tech</option>
+                            <option>BCA</option>
+                            <option>BBA</option>
+                            <option>B.Sc</option>
+                            <option>BA</option>
+                            <option>B.Com</option>
+                            <option>MCA</option>
+                            <option>MBA</option>
+                            <option>M.Tech</option>
+                            <option>Diploma</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Specialization</label>
+                        <select id="specialization">
+                            <option value="">Choose specialization</option>
+                            <option>Computer Science</option>
+                            <option>Artificial Intelligence</option>
+                            <option>Data Science</option>
+                            <option>Machine Learning</option>
+                            <option>Cyber Security</option>
+                            <option>Information Technology</option>
+                            <option>Electronics</option>
+                            <option>Mechanical</option>
+                            <option>Civil</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Academic Year</label>
+                        <select id="academicYear">
+                            <option value="">Select year</option>
+                            <option>1st Year</option>
+                            <option>2nd Year</option>
+                            <option>3rd Year</option>
+                            <option>4th Year</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Semester</label>
+                        <select id="semester">
+                            <option value="">Select semester</option>
+                            <option>Semester 1</option>
+                            <option>Semester 2</option>
+                            <option>Semester 3</option>
+                            <option>Semester 4</option>
+                            <option>Semester 5</option>
+                            <option>Semester 6</option>
+                            <option>Semester 7</option>
+                            <option>Semester 8</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Admission Type</label>
+                        <select id="admissionType">
+                            <option>Regular</option>
+                            <option>Lateral Entry</option>
+                            <option>Transfer</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>10th Percentage</label>
+                        <input type="number"
+                               id="marks10"
+                               min="0"
+                               max="100"
+                               step="0.01"
+                               placeholder="Enter percentage">
+                    </div>
+
+                    <div class="field">
+                        <label>12th Percentage</label>
+                        <input type="number"
+                               id="marks12"
+                               min="0"
+                               max="100"
+                               step="0.01"
+                               placeholder="Enter percentage">
+                    </div>
+
+                    <div class="field full">
+                        <label>Previous School / College</label>
+                        <input type="text"
+                               id="previousCollege"
+                               placeholder="Enter institution name">
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- SKILLS AND INTERESTS -->
+
+            <section>
+
+                <h2>04. Skills & Interests</h2>
+
+                <div class="field">
+
+                    <label>Technical Skills</label>
+
+                    <div class="options">
+                        <label><input type="checkbox" name="skills" value="Python"> Python</label>
+                        <label><input type="checkbox" name="skills" value="Java"> Java</label>
+                        <label><input type="checkbox" name="skills" value="C++"> C++</label>
+                        <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                        <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                        <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                        <label><input type="checkbox" name="skills" value="AI/ML"> AI / ML</label>
+                        <label><input type="checkbox" name="skills" value="Other"> Other</label>
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label>Hobbies</label>
+
+                    <div class="options">
+                        <label><input type="checkbox" name="hobbies" value="Coding"> Coding</label>
+                        <label><input type="checkbox" name="hobbies" value="Reading"> Reading</label>
+                        <label><input type="checkbox" name="hobbies" value="Sports"> Sports</label>
+                        <label><input type="checkbox" name="hobbies" value="Music"> Music</label>
+                        <label><input type="checkbox" name="hobbies" value="Gaming"> Gaming</label>
+                        <label><input type="checkbox" name="hobbies" value="Travelling"> Travelling</label>
+                        <label><input type="checkbox" name="hobbies" value="Photography"> Photography</label>
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label>Languages Known</label>
+
+                    <div class="options">
+                        <label><input type="checkbox" name="languages" value="English"> English</label>
+                        <label><input type="checkbox" name="languages" value="Hindi"> Hindi</label>
+                        <label><input type="checkbox" name="languages" value="French"> French</label>
+                        <label><input type="checkbox" name="languages" value="Spanish"> Spanish</label>
+                        <label><input type="checkbox" name="languages" value="Other"> Other</label>
+                    </div>
+
+                </div>
+
+                <div class="field">
+                    <label>About Yourself</label>
+                    <textarea id="about"
+                              rows="4"
+                              placeholder="Tell us something about yourself..."></textarea>
+                </div>
+
+            </section>
+
+            <!-- CAMPUS FACILITIES -->
+
+            <section>
+
+                <h2>05. Campus Facilities</h2>
+
+                <div class="field">
+
+                    <label>Accommodation Preference</label>
+
+                    <div class="options">
+                        <label><input type="radio" name="hostel" value="Hostel"> Hostel</label>
+                        <label><input type="radio" name="hostel" value="Day Scholar"> Day Scholar</label>
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label>Transportation</label>
+
+                    <div class="options">
+                        <label><input type="radio" name="transport" value="College Bus"> College Bus</label>
+                        <label><input type="radio" name="transport" value="Personal Vehicle"> Personal Vehicle</label>
+                        <label><input type="radio" name="transport" value="Public Transport"> Public Transport</label>
+                        <label><input type="radio" name="transport" value="Other"> Other</label>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- GUARDIAN INFORMATION -->
+
+            <section>
+
+                <h2>06. Parent / Guardian Details</h2>
+
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label>Guardian Name</label>
+                        <input type="text"
+                               id="guardianName"
+                               placeholder="Enter guardian name">
+                    </div>
+
+                    <div class="field">
+                        <label>Relationship</label>
+                        <select id="relationship">
+                            <option value="">Select relationship</option>
+                            <option>Father</option>
+                            <option>Mother</option>
+                            <option>Guardian</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Guardian Phone</label>
+                        <input type="tel"
+                               id="guardianPhone"
+                               placeholder="Enter phone number">
+                    </div>
+
+                    <div class="field">
+                        <label>Emergency Contact</label>
+                        <input type="tel"
+                               id="emergencyContact"
+                               placeholder="Emergency number">
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- DECLARATION -->
+
+            <section>
+
+                <h2>07. Declaration</h2>
+
+                <div class="declaration">
+
+                    <label>
+                        <input type="checkbox" id="declaration" required>
+                        I declare that all the information provided above is correct.
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="terms" required>
+                        I agree to the institution's terms and conditions.
+                    </label>
+
+                </div>
+
+            </section>
+
+            <!-- BUTTONS -->
+
+            <div class="buttons">
+
+                <button type="reset" class="reset-btn">
+                    Reset Form
+                </button>
+
+                <button type="submit" class="submit-btn">
+                    Submit Registration ✦
+                </button>
+
+            </div>
+
+            <p class="footer">
+                © 2026 NEXTGEN ACADEMY | Designed for Future Leaders
+            </p>
+
+        </form>
+
+    </div>
+
+
+    <!-- SUCCESS POPUP -->
+
+    <div class="overlay" id="overlay">
+
+        <div class="success-message">
+
+            <div class="success-icon">✓</div>
+
+            <h2>Registration Successful!</h2>
+
+            <p class="success-subtitle">
+                Welcome to NEXTGEN ACADEMY.
+            </p>
+
+            <h3 id="studentId"></h3>
+
+            <div id="studentDetails"></div>
+
+            <button type="button" id="closeBtn">
+                Done
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
